@@ -1,0 +1,260 @@
+<html>
+	<head>
+		<script></script>
+		<style>
+			h2 {
+				font: 1.5em sans-serif;
+			}
+			.tt {
+				width: 200;
+				height: 20;
+				font-size: small;
+				margin: 2;
+				text-align: center;
+			}
+			.ttl {
+				width: 650;
+				height: 20;
+				font-size: small;
+				margin: 2;
+				text-align: center;
+			}
+			.tt4 {
+				width: 280;
+				height: 30;
+				font-size: medium;
+				margin: 2;
+				text-align: center;
+			}
+			.tt0 {
+				width: 180;
+				height: 20;
+				font-size: small;
+				margin: 2;
+				text-align: center;
+			}
+			.tt1 {
+				width: 760;
+				height: 30;
+				font-size: medium;
+				margin: 2;
+				text-align: left;
+			}
+			.b30 {
+				width: 40;
+				height: 30;
+				font-size: medium;
+				margin: 6;
+			}
+			.b50 {
+				width: 85;
+				height: 30;
+				font-size: medium;
+				margin: 2;
+			}
+
+
+			.main {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+			.bg {
+				background-color: rgb(165, 230, 250);
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bg"></div>
+		<div class="main">
+			<h2>RBAS hash query</h2>
+			<table>
+				<tr>
+					<td><input class="tt4" value="key in partial hash" /></td>
+					<td><input class="tt1" value="1234 5678" /></td>
+				</tr>
+			</table>
+
+			<tr>
+				<td><input class="b30" type="button"  value="0" /></td>
+				<td><input class="b30" type="button"   value="1" /></td>
+				<td><input class="b30" type="button"   value="2" /></td>
+				<td><input class="b30"  type="button"  value="3" /></td>
+				<td><input class="b30"  type="button"  value="4" /></td>
+				<td><input class="b30"  type="button"  value="5" /></td>
+				<td><input class="b30"  type="button"  value="6" /></td>
+				<td><input class="b30"  type="button"  value="7" /></td>
+				<td><input class="b30"  type="button"  value="8" /></td>
+				<td><input class="b30"  type="button"  value="9" /></td>
+				<td><input class="b30"  type="button"  value="a" /></td>
+				<td><input class="b30"  type="button"  value="b" /></td>
+				<td><input class="b30"  type="button"  value="c" /></td>
+				<td><input class="b30"  type="button"  value="d" /></td>
+				<td><input class="b30"  type="button"  value="e" /></td>
+				<td><input class="b30"  type="button"  value="f" /></td>
+				<td><input class="b30"  type="button"  value="<" /></td>
+				<td><input class="b50" type="button"   value="query" /></td>
+			</tr>
+
+			<h2>result hash codes</h2>
+			<table>
+<Thead>
+					<th>hash code</th>
+					<th>RS / PS / TS</td>
+					<th>date   time</td>
+				</Thead>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							value="1234_5678_00ab_cdef_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS1/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS2/PS023/TS157" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_2def_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS3/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_5234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS3/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_6234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS4/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_7234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS1/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_8234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS2/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_9234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS1/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input
+							class="ttl"
+							 
+							value="1234_5678_a234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678_1234_5678"
+						/>
+					</td>
+					<td><input class="tt0"   value="RS1/PS009/TS123" /></td>
+					<td>
+						<input class="tt"   value="2019-12-31 11:34:23" />
+					</td>
+				</tr>
+
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+				<tr>
+					<td><input class="ttl"   value="-" /></td>
+					<td><input class="tt0"   value="-" /></td>
+					<td><input class="tt"   value="-" /></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
