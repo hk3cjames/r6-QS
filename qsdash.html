@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>DB-T/QS dashboard</title>
+  <style>
+    * {
+      font-family: Courier, monospace;
+    }
+
+    .tab {
+      tab-size: 8;
+    }
+
+    body {
+      font-size: 12px;
+    }
+
+    .top1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 900px;
+      text-align: center;
+      gap: 1em;
+      margin: 5mm;
+    }
+
+    .top1>div {
+      background-color: rgb(225, 239, 245);
+    }
+
+    .top10 {
+      margin-top: 30p;
+      grid-row: 1/3;
+    }
+
+    .hashrow>div {
+      background-color: rgb(196, 236, 252);
+    }
+
+    .hashrow>div:nth-child(even) {
+      background-color: rgb(225, 239, 245);
+    }
+
+    .hashrow {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-auto-rows: 62px;
+    }
+
+    h1 {
+      border: 1px solid rgb(168, 168, 168);
+      background-color: rgb(253, 251, 247);
+      text-align: center;
+      font-size: 12em;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: -0.2em;
+      margin-bottom: 1.5em;
+    }
+
+
+    h2 {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 5em;
+    }
+
+    h3 {
+      border: 1px solid rgb(168, 168, 168);
+      background-color: rgb(253, 251, 247);
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 5em;
+      margin: 20mm;
+      margin-top: 0.5px;
+    }
+
+    h4 {
+      text-align: left;
+      font-size: 3em;
+      margin-left: 20mm;
+    }
+
+    h5 {
+      border: 1px solid rgb(168, 168, 168);
+      background-color: rgb(253, 251, 247);
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 3em;
+      margin: 20mm;
+      margin-top: 0.5px;
+      /* text-align: left;
+      font-size: 2em;
+      margin-left: em;
+      margin-top: -10mm; */
+    }
+
+    p1 {
+      line-height: 1.48em;
+      border: 1px solid rgb(168, 168, 168);
+      background-color: rgb(253, 251, 247);
+      font-weight: normal;
+      font-size: 2em;
+      text-align: left;
+      /* padding-left: 2em; */
+    }
+
+    p2 {
+      line-height: 1.5em;
+      /* border: 1px solid rgb(168, 168, 168);
+      background-color: rgb(253, 251, 247); */
+      font-weight: normal;
+      font-size: 2em;
+      text-align: left;
+      /* padding-left: 2em; */
+    }
+
+    .itemDisp {
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top1">
+
+    <div class="top10">
+      <h4>most recent hash input</h2>
+        <div>
+          <p2> time . . hash . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ps . ts </p2>
+            <br>
+            <br>            
+            <div>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+            </div>
+            <br>
+            <div>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+            </div>
+            <br>
+            <div>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+            </div>
+            <br>
+            <div>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+            </div>
+            <br>
+            <div>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+              <p1 id="hash">
+                12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+              </p1>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="top10">
+      <br>
+      <h2>DB-T/QS dashboard</h2>
+        <br>
+        <h2>2020-11-11</h2>
+        <h2>23:23:45</h1>      
+      <br>
+      <h4>cycle </h4>
+        <h1>1000023456</h1>
+        <h4>total DB-T hash count :-  </h4>
+        <h3>45678</h3>
+        <br>
+        <h4>DB-T hash to RS :-  </h4>
+        <h5>1234567890abcdef1234567890abcdef<br>1234567890abcdef1234567890abcdef<br></h5>
+
+    </div>
+
+    <div class="top10">
+
+      <h4>most recent Query</h4>
+      <div>
+        <p2>
+          time . . hash . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ps . ts
+          </p2>
+          <br>
+          <br>       
+          <div>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+          </div>
+          <br>
+          <div>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+          </div>
+          <br>
+          <div>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+          </div>
+          <br>
+          <div>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+          </div>
+          <br>
+          <div>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+            <p1 id="hash">
+              12:12:34 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef 1000 1000
+            </p1>
+          </div>
+          <br>
+      </div>
+    </div>
+
+    <script src="ps.js">
+    </script>
+</body>
+
+</html>
